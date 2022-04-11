@@ -12,11 +12,27 @@
     background-color:#FF5851;
     width: 50%;
     height: inherit;
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: 1.8s all ease;
+}
+.section-1-box-1.active{
+    transform: translateX(0px);
+    opacity: 1;
+    z-index: -1;
 }
 .section-1-box-2{
     background-color:whitesmoke;
     width: 50%;
     height: inherit;
+    transform: translateX(150px);
+    opacity: 0;
+    transition: 1.8s all ease;
+}
+.section-1-box-2.active{
+    transform: translateX(0px);
+    opacity: 1;
+    z-index: -1;
 }
 .section-1-header{
     position: absolute;

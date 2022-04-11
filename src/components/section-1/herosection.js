@@ -61,6 +61,14 @@ window.addEventListener('load', (event) => {
     for (var i = 0; i < reveals.length; i++) {
         reveals[i].classList.add("active");
     }
+    var reveals = document.getElementsByClassName("section-1-box-1");
+    for (var i = 0; i < reveals.length; i++) {
+        reveals[i].classList.add("active");
+    }
+    var reveals = document.getElementsByClassName("section-1-box-2");
+    for (var i = 0; i < reveals.length; i++) {
+        reveals[i].classList.add("active");
+    }
   });
 
 function reveal() {
