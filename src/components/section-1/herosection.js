@@ -95,9 +95,10 @@ function reveal() {
   
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active");
-      } else {
-        reveals[i].classList.remove("active");
-      }
+      } 
+    //   else {
+    //     reveals[i].classList.remove("active");
+    //   }
     }
     console.log("active added")
   }
