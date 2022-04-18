@@ -1,4 +1,5 @@
 .section-1-container{
+    position: relative;
     display: flex;
     flex-direction: row;
     margin-left: 3%;
@@ -15,11 +16,13 @@
     transform: translateX(-150px);
     opacity: 0;
     transition: 1.8s all ease;
+    border: solid black 2px;
 }
 .section-1-box-1.active{
     transform: translateX(0px);
     opacity: 1;
     z-index: -1;
+    transform: translate3d(70px, 50px, 500px);
 }
 .section-1-box-2{
     background-color:whitesmoke;
@@ -28,9 +31,13 @@
     transform: translateX(150px);
     opacity: 0;
     transition: 1.8s all ease;
+    border-right: solid black 2px;
+    border-top: solid black 2px;
+    border-bottom: solid black 2px;
+    border-left: solid black 2px 20%;
 }
 .section-1-box-2.active{
-    transform: translateX(0px);
+    transform: translateX(-30px);
     opacity: 1;
     z-index: -1;
 }
@@ -69,14 +76,14 @@
     position: absolute;
     right: 10px;
     top: 40%;
-    font-size: 25px;
+    font-size: 30px;
     position: absolute;
     transform: translateX(10px);
     opacity: 0;
     transition: 1s all ease;
 }
 .social-media-container.active{
-    transform: translateX(0);
+    transform: translateX(-15px);
     opacity: 1;
 }
 .card {
