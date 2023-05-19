@@ -1,6 +1,6 @@
 ### Hi there 👋
 Shrinidhi Holla here 
-
+https://shrinidhi-holla.github.io/Shrinidhi-Holla/
 - 🔭 I’m currently working on Angular 13-16 & Spring Boot
 - 🌱 I’m looking to improve my front end development skills
 - 👯 I’m looking to collaborate on any angular / react based open source projects
