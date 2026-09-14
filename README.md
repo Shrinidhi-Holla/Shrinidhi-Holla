@@ -1,8 +1,21 @@
-### Hi there 👋
-Shrinidhi Holla here 
-https://shrinidhi-holla.github.io/Shrinidhi-Holla/
-- 🔭 I’m currently working on Angular 13-16 & Spring Boot
-- 🌱 I’m looking to improve my front end development skills
-- 👯 I’m looking to collaborate on any angular / react based open source projects
-- 📫 Reach out to me at shrinidhiholla2@gmail.com
-- ⚡ Fun fact: I love photography you can check out my work here - https://www.pexels.com/@Shrinidhi-Holla
+# Shrinidhi Holla Portfolio
+
+A premium responsive static portfolio website built from the supplied resume.
+
+## Run locally
+
+Option 1: open `index.html` directly in a browser.
+
+Option 2: run a local server:
+
+```bash
+python -m http.server 8000
+```
+
+Then visit http://localhost:8000.
+
+Files:
+- `index.html` — semantic page structure and resume-derived content
+- `styles.css` — responsive visual system and animations
+- `script.js` — mobile navigation and reveal-on-scroll behavior
+- `Shrinidhi_Holla_Resume.pdf` — linked resume download
