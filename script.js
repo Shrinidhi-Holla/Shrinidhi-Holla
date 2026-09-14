@@ -1,24 +1,4 @@
-const header = document.querySelector('.site-header');
-const menuToggle = document.querySelector('.menu-toggle');
-menuToggle?.addEventListener('click', () => {
-  const open = header.classList.toggle('menu-open');
-  menuToggle.setAttribute('aria-expanded', String(open));
-});
-document.querySelectorAll('.site-header nav a').forEach(link => link.addEventListener('click', () => {
-  header.classList.remove('menu-open');
-  menuToggle?.setAttribute('aria-expanded', 'false');
-}));
-
-const cursor = document.querySelector('.cursor-dot');
-window.addEventListener('pointermove', e => {
-  if (cursor) { cursor.style.left = `${e.clientX}px`; cursor.style.top = `${e.clientY}px`; }
-});
-document.querySelectorAll('a, button, .work-item').forEach(el => {
-  el.addEventListener('mouseenter', () => { if (cursor) { cursor.style.width = '22px'; cursor.style.height = '22px'; } });
-  el.addEventListener('mouseleave', () => { if (cursor) { cursor.style.width = '10px'; cursor.style.height = '10px'; } });
-});
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-}, { threshold: 0.12 });
-document.querySelectorAll('.section, .work-item, .experience-card, .education-strip').forEach(el => { el.classList.add('reveal'); observer.observe(el); });
+const cursor=document.querySelector('.cursor');
+if(cursor && window.matchMedia('(pointer:fine)').matches){window.addEventListener('mousemove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'});document.querySelectorAll('a,.work-row,.cap-card').forEach(el=>{el.addEventListener('mouseenter',()=>{cursor.style.width='42px';cursor.style.height='42px';cursor.style.background='rgba(228,87,63,.15)'});el.addEventListener('mouseleave',()=>{cursor.style.width='14px';cursor.style.height='14px';cursor.style.background='transparent'})})}
+const reveal=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.style.opacity=1;entry.target.style.transform='translateY(0)';reveal.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.statement-content,.cap-card,.work-row,.toolkit-grid,.closing-grid').forEach((el,i)=>{el.style.opacity=0;el.style.transform='translateY(24px)';el.style.transition=`opacity .8s ease ${Math.min(i*.04,.3)}s, transform .8s ease ${Math.min(i*.04,.3)}s`;reveal.observe(el)});
